@@ -4,14 +4,11 @@ import './todo-form.css'
 import { TodoContext } from '../../contexts/Todo'
 
 const TodoForm = () => {
-
   const { todos, setTodos } = useContext(TodoContext)
-
   const [task, setTask] = useState('')
 
   const handleAddTodo = () => {
-    setTodos([...todos,{label : task}])
-    setTask('')
+    // Fin an ability to add new task
   }
 
   const handleKeyUp = (e) => {
@@ -20,8 +17,6 @@ const TodoForm = () => {
     }
   }
 
-  console.log(todos);
-  
   return (
     <div className="todo-form">
       <input
